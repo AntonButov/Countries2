@@ -56,7 +56,6 @@ public class Api {
     }
 
     private String writeResponseBodyToDisk(Response<ResponseBody> body, String filename) throws IOException {
-            // todo change the file location/name according to your needs
             File futureStudioIconFile = new File(context.getFilesDir() + File.separator + filename);
             String res = futureStudioIconFile.getAbsolutePath();
             InputStream inputStream = null;
@@ -96,7 +95,6 @@ public class Api {
                 }
             }
         }
-
 
     String getFilename(String patch) {
         Uri uri= Uri.parse(patch);

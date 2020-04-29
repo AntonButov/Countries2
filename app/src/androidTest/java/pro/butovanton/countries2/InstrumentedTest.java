@@ -1,9 +1,6 @@
 package pro.butovanton.countries2;
 
-import android.app.Application;
 import android.content.Context;
-import android.util.Log;
-
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
@@ -36,12 +33,10 @@ public class InstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-
         assertEquals("pro.butovanton.countries2", appContext.getPackageName());
     }
 
     Repo repo = Repo.getInstance();
-
     private CountDownLatch countDownLatch = new CountDownLatch(1);
 
    @Test

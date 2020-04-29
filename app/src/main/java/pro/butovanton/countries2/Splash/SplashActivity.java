@@ -21,7 +21,6 @@ public class SplashActivity extends AppCompatActivity implements MainContract.Vi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         presenter = new Presenter( this );
-
     }
 
     @Override

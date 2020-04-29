@@ -10,8 +10,8 @@ public class Presenter implements MainContract.Presenter, MainContract.Model.OnF
     private MainContract.View splashActivity;
 
     public Presenter(MainContract.View splashActivity) {
-        this.splashActivity = splashActivity;
 
+        this.splashActivity = splashActivity;
         Repo.getInstance().startLoad( this);
     }
 
