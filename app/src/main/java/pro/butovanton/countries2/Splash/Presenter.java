@@ -1,7 +1,5 @@
 package pro.butovanton.countries2.Splash;
 
-import android.util.Log;
-
 import pro.butovanton.countries2.MainContract;
 import pro.butovanton.countries2.Repo.Repo;
 

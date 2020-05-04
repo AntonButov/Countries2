@@ -18,11 +18,6 @@ import pro.butovanton.countries2.Repo.Repo;
 
 import static org.junit.Assert.*;
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
 @RunWith(AndroidJUnit4.class)
 public class InstrumentedTest {
     public InstrumentedTest() {
@@ -37,14 +32,14 @@ public class InstrumentedTest {
     }
 
     Repo repo = Repo.getInstance();
-    private CountDownLatch countDownLatch = new CountDownLatch(1);
+    private CountDownLatch count = new CountDownLatch(1);
 
    @Test
    public void LoadRepo() throws InterruptedException {
        repo.startLoad(new MainContract.Model.OnFinishedListener() {
             @Override
             public void Finished() {
-                countDownLatch.countDown();
+                count.countDown();
             }
 
             @Override
@@ -52,7 +47,7 @@ public class InstrumentedTest {
                 assertTrue(false);
             }
         });
-        countDownLatch.await(2, TimeUnit.MINUTES);
+        count.await(2, TimeUnit.MINUTES);
    }
 
    Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
